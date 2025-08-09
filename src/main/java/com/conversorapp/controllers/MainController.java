@@ -29,7 +29,7 @@ public class MainController {
             String a = unidadDestino.getValue();
 
             if(de.equals(a)) {
-                resultadoLabel.setText("¡Selecciona unidades diferentes!");
+                resultadoLabel.setText("Selecciona unidades diferentes!");
                 return;
             }
 
@@ -40,7 +40,7 @@ public class MainController {
             agregarAlHistorial(conversion);
 
         } catch (NumberFormatException e) {
-            resultadoLabel.setText("Error: Ingresa un número válido");
+            resultadoLabel.setText("Error: Ingresa un numero valido");
         }
     }
 
@@ -53,7 +53,8 @@ public class MainController {
     }
 
     private double calcularConversion(double valor, String de, String a) {
-        // Conversión a metros primero
+
+        // Conversion a metros primero
         double enMetros = switch (de) {
             case "Pies" -> valor * 0.3048;
             case "Pulgadas" -> valor * 0.0254;
