@@ -29,7 +29,7 @@ public class MainController {
             String a = unidadDestino.getValue();
 
             if(de.equals(a)) {
-                resultadoLabel.setText("¡Selecciona unidades diferentes!");
+                resultadoLabel.setText("Selecciona unidades diferentes!");
                 return;
             }
 
@@ -40,7 +40,7 @@ public class MainController {
             agregarAlHistorial(conversion);
 
         } catch (NumberFormatException e) {
-            resultadoLabel.setText("Error: Ingresa un número válido");
+            resultadoLabel.setText("Error: Ingresa un numero válido");
         }
     }
 
@@ -76,7 +76,7 @@ public class MainController {
         // Máximo de conversiones en historial
         int MAX_HISTORIAL = 10;
         if(historialActual.split("\n").length >= MAX_HISTORIAL) {
-            // Eliminar la conversión más antigua
+            // Eliminar la conversion mas antigua
             historialActual = historialActual.substring(
                     historialActual.indexOf("\n") + 1
             );
